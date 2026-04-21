@@ -862,7 +862,7 @@ EditorSummary::on_scroll_event (GdkEventScroll* ev)
 			} else if (Keyboard::modifier_state_contains (ev->state, Keyboard::TertiaryModifier) && !user_needs_to_buy_a_proper_mouse) {
 				x -= 1;
 			} else {
-				_editor.scroll_left_half_page ();
+				_editor.scroll_left_step ();
 				return true;
 			}
 			break;
@@ -874,7 +874,7 @@ EditorSummary::on_scroll_event (GdkEventScroll* ev)
 			} else if (Keyboard::modifier_state_contains (ev->state, Keyboard::TertiaryModifier) && !user_needs_to_buy_a_proper_mouse) {
 				x += 1;
 			} else {
-				_editor.scroll_right_half_page ();
+				_editor.scroll_right_step ();
 				return true;
 			}
 			break;
